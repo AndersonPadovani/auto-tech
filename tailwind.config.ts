@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors:{
-        "color-orange": "#FF6600",
-        "color-orange-secondary": "#9F5320",
+        "color-orange": "#018e42",
+        "color-orange-secondary": "rgba(1, 142, 67, 0.6)",
         "color-background": "#2F2F2F",
         "color-background-secondary": "#666666"
       },
