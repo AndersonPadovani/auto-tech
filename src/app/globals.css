@@ -21,3 +21,15 @@ body{
     transform: scale(1.1);
     transition: all .5s;
 }
+
+@media (max-width: 1024px) {
+    .img-bg{
+        position: absolute;
+        top: -150px;
+        width: 100%;
+        height: 30%;   
+        max-height: 100dvh;
+        object-fit: cover;
+        clip-path: polygon(0 51%, 100% 51%, 100% 85%, 0 86%);
+    }    
+}
