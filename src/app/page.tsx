@@ -25,7 +25,7 @@ export default function Home() {
             para que você possa dirigir com tranquilidade e segurança.
           </p>
  
-          <div className="flex flex-col items-center w-max mt-32 gap-7 max-lg:w-11/12">
+          <div className="flex flex-col items-center w-max mt-32 gap-7 max-lg:w-11/12 max-lg:mt-20">
             <div className="flex gap-7">
 
               <a href={process.env.PAGE_SOCIAL_INSTAGRAM_LINK} target="_blank">
@@ -42,7 +42,7 @@ export default function Home() {
             <Link href={process.env.PAGE_SOCIAL_WHATSAPP_LINK!} target="_blank"
             className="text-2xl p-2 hover:bg-color-orang font-bold
             bg-color-orange-secondary rounded-xl text-slate-100 max-lg:bg-color-orange-secondary
-             max-lg:text-slate-100 max-lg:rounded-xl ">Agende Seu Serviço Hoje Mesmo!</Link>
+             max-lg:text-slate-100 max-lg:rounded-xl max-lg:text-center ">Agende Seu Serviço Hoje Mesmo!</Link>
 
           </div>
         </section>
