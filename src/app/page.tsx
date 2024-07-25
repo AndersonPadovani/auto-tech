@@ -4,6 +4,7 @@ import LogoImg from "../../public/img/logo2.png"
 import WidgetServicos from "@/components/widgetServicos/widgetServicos";
 import WidgetWhyChose from "@/components/widgetWhyChose/widgetWhyChose";
 import Divider from "@/components/dividers/dividers";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
             Nossa missão é garantir que seu carro esteja sempre em perfeitas condições, 
             para que você possa dirigir com tranquilidade e segurança.
           </p>
-
+ 
           <div className="flex flex-col items-center w-max mt-32 gap-7 max-lg:w-11/12">
             <div className="flex gap-7">
 
@@ -38,8 +39,10 @@ export default function Home() {
               </a>
 
             </div>
-            <button className="text-2xl p-2 hover:bg-color-orange text-green-600 font-bold max-lg:bg-color-orange-secondary
-             max-lg:text-slate-100 max-lg:rounded-xl ">Agende Seu Serviço Hoje Mesmo!</button>
+            <Link href={process.env.PAGE_SOCIAL_WHATSAPP_LINK!} target="_blank"
+            className="text-2xl p-2 hover:bg-color-orang font-bold
+            bg-color-orange-secondary rounded-xl text-slate-100 max-lg:bg-color-orange-secondary
+             max-lg:text-slate-100 max-lg:rounded-xl ">Agende Seu Serviço Hoje Mesmo!</Link>
 
           </div>
         </section>
