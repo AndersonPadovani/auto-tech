@@ -1,0 +1,11 @@
+.inpType:focus ~ label,
+.inpHasText ~ label {
+  background-color: #15803d;
+  top: -0.75rem;
+  border-radius: 0.375rem;
+}
+
+label {
+  top: 15px;
+  transition: all ease-in-out 0.7s;
+}
