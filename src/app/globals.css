@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.img-bg{
+  position: absolute;
+  right: 0;
+  width: 60%;   
+  max-height: 100dvh;
+  object-fit: cover;
+  clip-path: polygon(49% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
