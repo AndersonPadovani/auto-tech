@@ -163,7 +163,7 @@ export default function Home() {
           <WidgetWhyChose
             srcIcon="./img/iconAll.png"
             titleName="Serviço Completo"
-            description="Oferecemos uma gama completa de serviços desde man’utenção preventiva até reparos complexos, 
+            description="Oferecemos uma gama completa de serviços desde manutenção preventiva até reparos complexos, 
               utilizando as mais modernas ferramentas e tecnologias."
           />
 
