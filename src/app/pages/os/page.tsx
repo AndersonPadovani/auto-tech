@@ -2,41 +2,96 @@
 import { BoxInput } from "@/components/boxInput/boxInput";
 import InputForm from "@/components/inputForm/inputForm";
 import { number } from "zod";
+import { LogOut, FilePlus2, FileSearch, ReceiptText } from "lucide-react";
+import { FormEvent, useEffect, useState } from "react";
+import { ValidaCep, GetCepInfo, FormataCep, CepInfoType } from "@/utils/getCep";
 
 export default function Page() {
+  const [cep, setCep] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [rua, setRua] = useState("");
+
+  useEffect(() => {
+    if (!ValidaCep({ cep })) {
+      console.log("Cep Invalido");
+      return;
+    }
+
+    handlerGetCepInfo();
+  }, [cep]);
+
+  const handlerGetCepInfo = async () => {
+    const infoCep = await GetCepInfo({ cep });
+    if (infoCep) {
+      setCep(infoCep.cep);
+      setCidade(infoCep.localidade);
+      setRua(infoCep.logradouro);
+    }
+  };
+
   return (
     <main className="flex flex-col w-full items-center gap-5 h-dvh bg-color-background">
-      <nav className="flex w-3/4 h-max justify-between">
+      <nav className="flex pt-4 w-3/4 h-max justify-between">
         <img
-          src="../img/service.png"
-          alt="Imagen Logo empresa"
-          className="w-20 h-20"
+          src="../img/logo2.png"
+          alt="Logo marca Auto Tech"
+          className="h-20"
         />
         <menu className="flex gap-8 items-center">
           <li>
-            <a href="http://">logout</a>
+            <a className="flex gap-2" href="http://">
+              Nova OS
+              <FilePlus2 className="text-color-orange" />
+            </a>
           </li>
           <li>
-            <a href="http://">Nova OS</a>
+            <a className="flex gap-2" href="http://">
+              Consultar OS
+              <FileSearch className="text-color-orange" />
+            </a>
           </li>
           <li>
-            <a href="http://">Consultar OS</a>
+            <a className="flex gap-2" href="http://">
+              logout
+              <LogOut className="text-color-orange" />
+            </a>
           </li>
         </menu>
       </nav>
 
-      <hr className="w-4/5 " />
+      <hr className="w-4/5  " />
 
-      <section className="w-3/4">
+      <section className="w-3/4 border-2 p-5 pb-10 rounded-2xl border-color-orange">
         <form>
           <div className="flex flex-col gap-5">
             <BoxInput boxName="Dados do Cliente">
               <InputForm valueName="Nome" divClassName="col-span-3" />
               <InputForm valueName="Telefone" divClassName="col-span-1" />
               <InputForm valueName="CPF" divClassName="col-span-1" />
-              <InputForm valueName="CEP" divClassName="col-span-1" />
-              <InputForm valueName="Cidade" divClassName="col-span-1" />
-              <InputForm valueName="Rua" divClassName="col-span-3" />
+              <InputForm
+                valueName="CEP"
+                valueInput={cep}
+                divClassName="col-span-1"
+                onChangeCapture={(event) => {
+                  setCep(event.currentTarget.value);
+                }}
+              />
+              <InputForm
+                valueName="Cidade"
+                valueInput={cidade}
+                divClassName="col-span-1"
+                onChangeCapture={(event) => {
+                  setCidade(event.currentTarget.value);
+                }}
+              />
+              <InputForm
+                valueName="Rua"
+                valueInput={rua}
+                divClassName="col-span-3"
+                onChangeCapture={(event) => {
+                  setRua(event.currentTarget.value);
+                }}
+              />
               <InputForm
                 valueName="Numero"
                 itemType="number"
@@ -47,6 +102,8 @@ export default function Page() {
               <InputForm valueName="Veiculo" />
               <InputForm valueName="Placa" />
               <InputForm valueName="Ano" typeof="number" />
+              <InputForm valueName="Codigo Cor" typeof="number" />
+              <InputForm valueName="Combustivel" typeof="number" />
             </BoxInput>
             <BoxInput boxName="Serviços"></BoxInput>
           </div>
