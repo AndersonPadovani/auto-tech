@@ -24,7 +24,7 @@ const URL_END = "/json";
 export const GetCepInfo = async ({
   cep,
 }: GetCepType): Promise<CepInfoType | undefined> => {
-  if (!ValidaCep) {
+  if (!ValidaCep({ cep })) {
     return;
   }
 
@@ -35,13 +35,12 @@ export const GetCepInfo = async ({
   return data as CepInfoType;
 };
 export const ValidaCep = ({ cep }: GetCepType): boolean => {
+  if (cep === undefined) {
+    return false;
+  }
   const regecClear = cep.replace(/\D/g, ""); // Remove tudo que não é dígito
   const regexCep = /^[0-9]{8}$/; // Verifica se há exatamente 8 dígitos
   return regexCep.test(regecClear);
-};
-
-const LimpaCep = ({ cep }: GetCepType): GetCepType => {
-  return { cep: cep.replace(/\D/g, "") }; // Remove tudo que não é dígito
 };
 
 export const FormataCep = ({ cep }: GetCepType): GetCepType | null => {

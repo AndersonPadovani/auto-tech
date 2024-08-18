@@ -13,7 +13,6 @@ export default function Page() {
 
   useEffect(() => {
     if (!ValidaCep({ cep })) {
-      console.log("Cep Invalido");
       return;
     }
 
