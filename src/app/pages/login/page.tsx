@@ -56,7 +56,7 @@ export default function Page(this: any) {
       <div className="w-full h-full absolute backdrop-blur-0 top-0 left-0  blur-sm"></div>
       <form
         onSubmit={handleSubmit(() => console.log("save"))}
-        className="flex flex-col bg-transparent/60 items-center justify-center z-10 w-2/5 rounded-3xl gap-5 border-color-orange border-2"
+        className="flex flex-col px-32 bg-transparent/60 items-center justify-center z-10 w-2/5 rounded-3xl gap-5 border-color-orange border-2"
       >
         <Image
           alt="carros batendo"

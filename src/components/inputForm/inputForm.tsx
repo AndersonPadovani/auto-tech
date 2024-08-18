@@ -3,15 +3,23 @@ import "./inputForm.css";
 
 interface InputFormType extends InputHTMLAttributes<HTMLInputElement> {
   valueName: string;
-  valueInput: string
+  valueInput?: string;
+  className?: string;
+  divClassName?: string;
 }
 
-const InputForm = ({ valueName, valueInput, ...rest }: InputFormType) => {
+const InputForm = ({
+  valueName,
+  valueInput,
+  className,
+  divClassName,
+  ...rest
+}: InputFormType) => {
   const [inpText, setInpText] = useState("");
   return (
-    <div className="flex items-center w-2/3 h-max relative">
+    <div className={`${divClassName} flex items-center w-full h-max relative`}>
       <input
-        className={`inpType ${inpText || valueInput ? "inpHasText" : ""} w-full h-14 pl-3 text-slate-200 font-bold text-lg bg-transparent/30 rounded-xl border-green-700 border-2 outline-none`}
+        className={`inpType ${inpText || valueInput ? "inpHasText" : ""} w-full h-14 pl-3 text-slate-200 font-bold text-lg bg-transparent/30 rounded-xl border-green-700 border-2 outline-none ${className || ""}`}
         id={valueName}
         minLength={4}
         {...rest}
