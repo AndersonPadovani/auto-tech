@@ -8,7 +8,7 @@ type BoxInputType = {
 export const BoxInput = ({ boxName, children, ...rest }: BoxInputType) => {
   return (
     <div
-      className="grid grid-cols-6 gap-2 w-full border-[1px] p-2 pt-10 rounded-3xl border-color-orange relative"
+      className="grid grid-cols-6 gap-5 w-full border-[1px] p-2 pt-10 rounded-3xl border-color-orange relative"
       {...rest}
     >
       <label
