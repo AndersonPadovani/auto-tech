@@ -36,7 +36,7 @@ const InputForm = ({
         className={`inpType ${inpText || valueInput ? "inpHasText" : ""} w-full h-14 pl-3 text-slate-200 font-bold text-lg bg-transparent/30 rounded-xl border-green-700 border-2 outline-none ${className || ""}`}
         id={valueName}
         minLength={4}
-        type={eye ? "password" : "text"}
+        type={type != "password" || eye ? "text" : "password"}
         {...rest}
         value={valueInput}
         onChange={(event) => setInpText(event.currentTarget.value)}
