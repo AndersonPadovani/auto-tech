@@ -1,13 +1,6 @@
-import {
-  HtmlHTMLAttributes,
-  HTMLInputTypeAttribute,
-  InputHTMLAttributes,
-  useState,
-} from "react";
+import { HTMLInputTypeAttribute, InputHTMLAttributes, useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import "./inputForm.css";
-import Image from "next/image";
-import Eye from "../../../public/img/olho.svg";
-import Eyex from "../../../public/img/olhox.svg";
 
 interface InputFormType extends InputHTMLAttributes<HTMLInputElement> {
   valueName: string;
@@ -30,6 +23,20 @@ const InputForm = ({
   const [inpText, setInpText] = useState("");
   const [eye, setEye] = useState(false);
 
+  const getEyeType = () => {
+    return eye ? (
+      <EyeOff
+        className="absolute right-3 text-slate-300"
+        onClick={() => setEye((e) => !e)}
+      />
+    ) : (
+      <Eye
+        className="absolute right-3 text-slate-300"
+        onClick={() => setEye((e) => !e)}
+      />
+    );
+  };
+
   return (
     <div className={`${divClassName} flex items-center w-full h-max relative`}>
       <input
@@ -42,18 +49,7 @@ const InputForm = ({
         onChange={(event) => setInpText(event.currentTarget.value)}
       />
 
-      {type === "password" ? (
-        <Image
-          width={30}
-          height={30}
-          src={eye ? Eye : Eyex}
-          alt={"Eye Password"}
-          className="absolute right-3"
-          onClick={() => setEye((e) => !e)}
-        />
-      ) : (
-        ""
-      )}
+      {type === "password" ? getEyeType() : ""}
 
       <label htmlFor={valueName} className="absolute ml-3 px-2 text-slate-200">
         {valueName}
