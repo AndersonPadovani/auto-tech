@@ -1,10 +1,9 @@
 "use client";
 import { BoxInput } from "@/components/boxInput/boxInput";
 import InputForm from "@/components/inputForm/inputForm";
-import { number } from "zod";
-import { LogOut, FilePlus2, FileSearch, ReceiptText } from "lucide-react";
-import { FormEvent, useEffect, useState } from "react";
-import { ValidaCep, GetCepInfo, FormataCep, CepInfoType } from "@/utils/getCep";
+import { LogOut, FilePlus2, FileSearch } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ValidaCep, GetCepInfo } from "@/utils/getCep";
 
 export default function Page() {
   const [cep, setCep] = useState("");
@@ -36,7 +35,7 @@ export default function Page() {
           alt="Logo marca Auto Tech"
           className="h-20"
         />
-        <menu className="flex gap-8 items-center">
+        <menu className="flex gap-8 items-center text-color-text">
           <li>
             <a className="flex gap-2" href="http://">
               Nova OS
@@ -60,7 +59,7 @@ export default function Page() {
 
       <hr className="w-4/5  " />
 
-      <section className="w-3/4 border-2 p-5 pb-10 rounded-2xl border-color-orange">
+      <section className="w-3/4 p-5 pb-10 rounded-sm bg-color-background-secondary ">
         <form>
           <div className="flex flex-col gap-5">
             <BoxInput boxName="Dados do Cliente">

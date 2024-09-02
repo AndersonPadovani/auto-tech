@@ -13,7 +13,7 @@ export const BoxInput = ({ boxName, children, ...rest }: BoxInputType) => {
     >
       <label
         hidden={boxName ? false : true}
-        className="absolute -top-3 ml-4 bg-color-orange text-slate-200 p-[0.2rem] rounded-md"
+        className="absolute -top-3 ml-4 bg-color-orange text-color-text-white p-[0.2rem] rounded-md"
       >
         {boxName}
       </label>

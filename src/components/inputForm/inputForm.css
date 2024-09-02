@@ -1,6 +1,6 @@
 .inpType:focus ~ label,
 .inpHasText ~ label {
-  background-color: #15803d;
+  @apply bg-color-orange;
   top: -0.75rem;
   border-radius: 0.375rem;
 }

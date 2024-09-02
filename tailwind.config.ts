@@ -23,10 +23,13 @@ const config = {
         logoHeigth: "128px",
       },
       colors: {
-        "color-orange": "#018e42",
-        "color-orange-secondary": "rgba(1, 142, 67, 0.6)",
-        "color-background": "#2F2F2F",
-        "color-background-secondary": "#666666",
+        "color-orange": "#FF6600",
+        "color-orange-secondary": "#ff983f",
+        "color-background": "#1A1F2B",
+        "color-background-secondary": "#292e3b",
+        "color-text": "#F5F5F5",
+        "color-text-white": "#fefefe",
+        "color-gray": "#cccccc",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
