@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sobre a Página Auto Tech
 
-## Getting Started
+Bem-vindo à **Auto Tech**, uma plataforma desenvolvida para apresentar serviços especializados em chapeação e mecânica de veículos, oferecendo soluções modernas e eficientes para manter seu veículo em perfeito estado.
 
-First, run the development server:
+## Tecnologias Utilizadas:
+- **HTML5** e **CSS3**: Estrutura e design visual da página.
+- **JavaScript**: Funcionalidades interativas e dinâmicas.
+- **Next.js**: Framework utilizado para otimização e renderização eficiente.
+- **Vercel**: Hospedagem confiável e de alto desempenho.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objetivo:
+A página foi criada para conectar proprietários de veículos com serviços especializados em reparos automotivos. Seu objetivo é apresentar a Auto Tech como uma referência em serviços de chapeação e mecânica, com um design atraente e de fácil navegação.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades:
+- Apresentação dos principais serviços oferecidos.
+- Design moderno e responsivo para dispositivos móveis e desktops.
+- Hospedagem estável e otimizada com carregamento rápido.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sobre a Empresa:
+A **Auto Tech** é especialista em serviços automotivos, com foco em qualidade, eficiência e atendimento personalizado. Oferecemos soluções completas para garantir a melhor performance e estética para o seu veículo.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Acesse o site completo em: [Auto Tech](https://auto-tech-pearl.vercel.app/)
